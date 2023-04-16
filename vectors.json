@@ -1,6 +1,6 @@
 [
   {
-    "name": "serverless framework",
+    "name": "Serverless Framework",
     "language": "serverless",
     "version": "3.27.0",
     "description": "Serverless Framework, the serverless application framework for building web, mobile and IoT applications on AWS Lambda, Azure Functions, Google CloudFunctions & more!",
@@ -9,7 +9,7 @@
     "docLink": "https://serverless.com/framework/docs/"
   },
   {
-    "name": "pandas",
+    "name": "Pandas",
     "language": "python",
     "version": "1.5.3",
     "description": "Pandas is alibrary providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language.",
@@ -19,7 +19,7 @@
     "model": "openai_text-embedding-ada-002"
   },
   {
-    "name": "solidity",
+    "name": "Solidity",
     "language": "ethereum",
     "version": "0.8.18",
     "description": "Solidity is an object-oriented, high-level language for implementing smart contracts.",
@@ -28,7 +28,7 @@
     "docLink": "https://docs.soliditylang.org/en/v0.8.18/"
   },
   {
-    "name": "vitejs",
+    "name": "Vitejs",
     "language": "javascript",
     "version": "4.2.0",
     "description": "Get ready for a development environment that can finally catch up with you.",
@@ -38,7 +38,7 @@
     "model": "openai_text-embedding-ada-002"
   },
   {
-    "name": "vuejs",
+    "name": "Vuejs",
     "language": "javascript",
     "version": "3.3.0",
     "description": "Vuejs is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.",
@@ -48,7 +48,7 @@
     "model": "openai_text-embedding-ada-002"
   },
   {
-    "name": "react",
+    "name": "React",
     "language": "javascript",
     "version": "18.2.0",
     "description": "A JavaScript library for building user interfaces\nGet Started\n",
@@ -58,7 +58,7 @@
     "model": "openai_text-embedding-ada-002"
   },
   {
-    "name": "laravel",
+    "name": "Laravel",
     "language": "php",
     "version": "8",
     "description": "Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.",
