@@ -1,0 +1,42 @@
+name: Parse and Combine JSON Files
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  AWS_REGION: us-east-1
+  S3_BUCKET: helpfox
+
+jobs:
+  parse_and_combine:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        ssh-key: ${{ secrets.DEPLOY_KEY }}
+
+    - name: Configure AWS CLI
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+
+    - name: Parsing and Combining JSON Files
+      run: |
+        git config --global user.email "me@email.com"
+        git config --global user.name "iLyas"
+        json_files=()
+        while IFS= read -r -d '' file; do
+          json_files+=("$(cat "$file")")
+        done < <(find vectors -type f -name "*.json" -print0)
+        echo "[$(IFS=,; echo "${json_files[*]}")]" > combined.json
+        git add combined.json
+        git commit -m "Update combined.json"
+        git push origin main
+        aws s3 cp combined.json s3://${{ env.S3_BUCKET }}/combined.json
+
+          
